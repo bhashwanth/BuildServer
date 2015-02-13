@@ -1,0 +1,161 @@
+Building in workspace /var/lib/jenkins/jobs/JBake-Github/workspace
+ &gt; git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ &gt; git config remote.origin.url https://github.com/macluo/jbake.git # timeout=10
+Fetching upstream changes from https://github.com/macluo/jbake.git
+ &gt; git --version # timeout=10
+ &gt; git -c core.askpass=true fetch --tags --progress https://github.com/macluo/jbake.git +refs/heads/*:refs/remotes/origin/*
+ &gt; git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ &gt; git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 4d40e82b5062d6c93b6672aa3598742b1ee1fe65 (refs/remotes/origin/master)
+ &gt; git config core.sparsecheckout # timeout=10
+ &gt; git checkout -f 4d40e82b5062d6c93b6672aa3598742b1ee1fe65
+ &gt; git rev-list bcc7efc12214c36c0a3adbc418440210337eb20d # timeout=10
+Parsing POMs
+[workspace] $ /usr/lib/jvm/default-java/bin/java -cp /var/lib/jenkins/plugins/maven-plugin/WEB-INF/lib/maven3-agent-1.5.jar:/var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/Maven_3.0.5/boot/plexus-classworlds-2.4.jar org.jvnet.hudson.maven3.agent.Maven3Main /var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/Maven_3.0.5 /var/cache/jenkins/war/WEB-INF/lib/remoting-2.49.jar /var/lib/jenkins/plugins/maven-plugin/WEB-INF/lib/maven3-interceptor-1.5.jar /var/lib/jenkins/plugins/maven-plugin/WEB-INF/lib/maven3-interceptor-commons-1.5.jar 42948
+&lt;===[JENKINS REMOTING CAPACITY]===&gt;���channel started
+Executing Maven:  -B -f /var/lib/jenkins/jobs/JBake-Github/workspace/pom.xml clean install -DskipTests=true
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building jbake 2.3.3-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.4.1:clean (default-clean) @ jbake-core ---
+[INFO] Deleting /var/lib/jenkins/jobs/JBake-Github/workspace/target
+[INFO] Deleting /var/lib/jenkins/jobs/JBake-Github/workspace/dist (includes = [], excludes = [])
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.0:enforce (enforce-maven) @ jbake-core ---
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.7.2.201409121644:prepare-agent (prepare-agent) @ jbake-core ---
+[INFO] argLine set to -javaagent:/var/lib/jenkins/.m2/repository/org/jacoco/org.jacoco.agent/0.7.2.201409121644/org.jacoco.agent-0.7.2.201409121644-runtime.jar=destfile=/var/lib/jenkins/jobs/JBake-Github/workspace/target/jacoco.exec
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:resources (default-resources) @ jbake-core ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 4 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.2:compile (default-compile) @ jbake-core ---
+[INFO] Compiling 34 source files to /var/lib/jenkins/jobs/JBake-Github/workspace/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:testResources (default-testResources) @ jbake-core ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 47 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.2:testCompile (default-testCompile) @ jbake-core ---
+[INFO] Compiling 10 source files to /var/lib/jenkins/jobs/JBake-Github/workspace/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.10:test (default-test) @ jbake-core ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-scm-plugin:1.1:checkout (checkout-example-project-freemarker) @ jbake-core ---
+[INFO] Removing /var/lib/jenkins/jobs/JBake-Github/workspace/target/example-project-freemarker
+[INFO] Executing: /bin/sh -c cd /var/lib/jenkins/jobs/JBake-Github/workspace/target &amp;&amp; git clone git://github.com/jbake-org/jbake-example-project-freemarker.git /var/lib/jenkins/jobs/JBake-Github/workspace/target/example-project-freemarker
+[INFO] Working directory: /var/lib/jenkins/jobs/JBake-Github/workspace/target
+[INFO] Executing: /bin/sh -c cd /var/lib/jenkins/jobs/JBake-Github/workspace/target/example-project-freemarker &amp;&amp; git pull git://github.com/jbake-org/jbake-example-project-freemarker.git master
+[INFO] Working directory: /var/lib/jenkins/jobs/JBake-Github/workspace/target/example-project-freemarker
+[INFO] Executing: /bin/sh -c cd /var/lib/jenkins/jobs/JBake-Github/workspace/target/example-project-freemarker &amp;&amp; git checkout
+[INFO] Working directory: /var/lib/jenkins/jobs/JBake-Github/workspace/target/example-project-freemarker
+[INFO] Executing: /bin/sh -c cd /var/lib/jenkins/jobs/JBake-Github/workspace/target/example-project-freemarker &amp;&amp; git ls-files
+[INFO] Working directory: /var/lib/jenkins/jobs/JBake-Github/workspace/target/example-project-freemarker
+[INFO] 
+[INFO] --- maven-scm-plugin:1.1:checkout (checkout-example-project-groovy) @ jbake-core ---
+[INFO] Removing /var/lib/jenkins/jobs/JBake-Github/workspace/target/example-project-groovy
+[INFO] Executing: /bin/sh -c cd /var/lib/jenkins/jobs/JBake-Github/workspace/target &amp;&amp; git clone git://github.com/jbake-org/jbake-example-project-groovy.git /var/lib/jenkins/jobs/JBake-Github/workspace/target/example-project-groovy
+[INFO] Working directory: /var/lib/jenkins/jobs/JBake-Github/workspace/target
+[INFO] Executing: /bin/sh -c cd /var/lib/jenkins/jobs/JBake-Github/workspace/target/example-project-groovy &amp;&amp; git pull git://github.com/jbake-org/jbake-example-project-groovy.git master
+[INFO] Working directory: /var/lib/jenkins/jobs/JBake-Github/workspace/target/example-project-groovy
+[INFO] Executing: /bin/sh -c cd /var/lib/jenkins/jobs/JBake-Github/workspace/target/example-project-groovy &amp;&amp; git checkout
+[INFO] Working directory: /var/lib/jenkins/jobs/JBake-Github/workspace/target/example-project-groovy
+[INFO] Executing: /bin/sh -c cd /var/lib/jenkins/jobs/JBake-Github/workspace/target/example-project-groovy &amp;&amp; git ls-files
+[INFO] Working directory: /var/lib/jenkins/jobs/JBake-Github/workspace/target/example-project-groovy
+[INFO] 
+[INFO] --- maven-scm-plugin:1.1:checkout (checkout-example-project-thymeleaf) @ jbake-core ---
+[INFO] Removing /var/lib/jenkins/jobs/JBake-Github/workspace/target/example-project-thymeleaf
+[INFO] Executing: /bin/sh -c cd /var/lib/jenkins/jobs/JBake-Github/workspace/target &amp;&amp; git clone git://github.com/jbake-org/jbake-example-project-thymeleaf.git /var/lib/jenkins/jobs/JBake-Github/workspace/target/example-project-thymeleaf
+[INFO] Working directory: /var/lib/jenkins/jobs/JBake-Github/workspace/target
+[INFO] Executing: /bin/sh -c cd /var/lib/jenkins/jobs/JBake-Github/workspace/target/example-project-thymeleaf &amp;&amp; git pull git://github.com/jbake-org/jbake-example-project-thymeleaf.git master
+[INFO] Working directory: /var/lib/jenkins/jobs/JBake-Github/workspace/target/example-project-thymeleaf
+[INFO] Executing: /bin/sh -c cd /var/lib/jenkins/jobs/JBake-Github/workspace/target/example-project-thymeleaf &amp;&amp; git checkout
+[INFO] Working directory: /var/lib/jenkins/jobs/JBake-Github/workspace/target/example-project-thymeleaf
+[INFO] Executing: /bin/sh -c cd /var/lib/jenkins/jobs/JBake-Github/workspace/target/example-project-thymeleaf &amp;&amp; git ls-files
+[INFO] Working directory: /var/lib/jenkins/jobs/JBake-Github/workspace/target/example-project-thymeleaf
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ jbake-core ---
+[INFO] Building jar: /var/lib/jenkins/jobs/JBake-Github/workspace/target/jbake-core.jar
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.4:copy-dependencies (copy-dependencies) @ jbake-core ---
+[INFO] Copying logback-classic-1.1.1.jar to /var/lib/jenkins/jobs/JBake-Github/workspace/target/lib/logback-classic-1.1.1.jar
+[INFO] Copying orientdb-core-1.6.4.jar to /var/lib/jenkins/jobs/JBake-Github/workspace/target/lib/orientdb-core-1.6.4.jar
+[INFO] Copying asm-tree-4.1.jar to /var/lib/jenkins/jobs/JBake-Github/workspace/target/lib/asm-tree-4.1.jar
+[INFO] Copying jna-4.0.0.jar to /var/lib/jenkins/jobs/JBake-Github/workspace/target/lib/jna-4.0.0.jar
+[INFO] Copying asciidoctorj-1.5.1.jar to /var/lib/jenkins/jobs/JBake-Github/workspace/target/lib/asciidoctorj-1.5.1.jar
+[INFO] Copying commons-logging-1.1.1.jar to /var/lib/jenkins/jobs/JBake-Github/workspace/target/lib/commons-logging-1.1.1.jar
+[INFO] Copying commons-lang-2.6.jar to /var/lib/jenkins/jobs/JBake-Github/workspace/target/lib/commons-lang-2.6.jar
+[INFO] Copying jruby-complete-1.7.9.jar to /var/lib/jenkins/jobs/JBake-Github/workspace/target/lib/jruby-complete-1.7.9.jar
+[INFO] Copying javassist-3.16.1-GA.jar to /var/lib/jenkins/jobs/JBake-Github/workspace/target/lib/javassist-3.16.1-GA.jar
+[INFO] Copying jcommander-1.32.jar to /var/lib/jenkins/jobs/JBake-Github/workspace/target/lib/jcommander-1.32.jar
+[INFO] Copying groovy-2.3.6.jar to /var/lib/jenkins/jobs/JBake-Github/workspace/target/lib/groovy-2.3.6.jar
+[INFO] Copying unbescape-1.0.jar to /var/lib/jenkins/jobs/JBake-Github/workspace/target/lib/unbescape-1.0.jar
+[INFO] Copying jna-platform-4.0.0.jar to /var/lib/jenkins/jobs/JBake-Github/workspace/target/lib/jna-platform-4.0.0.jar
+[INFO] Copying asm-4.1.jar to /var/lib/jenkins/jobs/JBake-Github/workspace/target/lib/asm-4.1.jar
+[INFO] Copying parboiled-core-1.1.6.jar to /var/lib/jenkins/jobs/JBake-Github/workspace/target/lib/parboiled-core-1.1.6.jar
+[INFO] Copying logback-core-1.1.1.jar to /var/lib/jenkins/jobs/JBake-Github/workspace/target/lib/logback-core-1.1.1.jar
+[INFO] Copying thymeleaf-2.1.3.RELEASE.jar to /var/lib/jenkins/jobs/JBake-Github/workspace/target/lib/thymeleaf-2.1.3.RELEASE.jar
+[INFO] Copying groovy-xml-2.3.6.jar to /var/lib/jenkins/jobs/JBake-Github/workspace/target/lib/groovy-xml-2.3.6.jar
+[INFO] Copying freemarker-2.3.20.jar to /var/lib/jenkins/jobs/JBake-Github/workspace/target/lib/freemarker-2.3.20.jar
+[INFO] Copying parboiled-java-1.1.6.jar to /var/lib/jenkins/jobs/JBake-Github/workspace/target/lib/parboiled-java-1.1.6.jar
+[INFO] Copying slf4j-api-1.7.6.jar to /var/lib/jenkins/jobs/JBake-Github/workspace/target/lib/slf4j-api-1.7.6.jar
+[INFO] Copying json-simple-1.1.1.jar to /var/lib/jenkins/jobs/JBake-Github/workspace/target/lib/json-simple-1.1.1.jar
+[INFO] Copying ognl-3.0.6.jar to /var/lib/jenkins/jobs/JBake-Github/workspace/target/lib/ognl-3.0.6.jar
+[INFO] Copying groovy-templates-2.3.6.jar to /var/lib/jenkins/jobs/JBake-Github/workspace/target/lib/groovy-templates-2.3.6.jar
+[INFO] Copying args4j-2.0.26.jar to /var/lib/jenkins/jobs/JBake-Github/workspace/target/lib/args4j-2.0.26.jar
+[INFO] Copying commons-io-2.4.jar to /var/lib/jenkins/jobs/JBake-Github/workspace/target/lib/commons-io-2.4.jar
+[INFO] Copying orient-commons-1.6.4.jar to /var/lib/jenkins/jobs/JBake-Github/workspace/target/lib/orient-commons-1.6.4.jar
+[INFO] Copying snappy-0.3.jar to /var/lib/jenkins/jobs/JBake-Github/workspace/target/lib/snappy-0.3.jar
+[INFO] Copying jetty-util-8.1.12.v20130726.jar to /var/lib/jenkins/jobs/JBake-Github/workspace/target/lib/jetty-util-8.1.12.v20130726.jar
+[INFO] Copying orientdb-nativeos-1.6.4.jar to /var/lib/jenkins/jobs/JBake-Github/workspace/target/lib/orientdb-nativeos-1.6.4.jar
+[INFO] Copying asm-analysis-4.1.jar to /var/lib/jenkins/jobs/JBake-Github/workspace/target/lib/asm-analysis-4.1.jar
+[INFO] Copying jetty-continuation-8.1.12.v20130726.jar to /var/lib/jenkins/jobs/JBake-Github/workspace/target/lib/jetty-continuation-8.1.12.v20130726.jar
+[INFO] Copying jetty-server-8.1.12.v20130726.jar to /var/lib/jenkins/jobs/JBake-Github/workspace/target/lib/jetty-server-8.1.12.v20130726.jar
+[INFO] Copying jetty-http-8.1.12.v20130726.jar to /var/lib/jenkins/jobs/JBake-Github/workspace/target/lib/jetty-http-8.1.12.v20130726.jar
+[INFO] Copying asm-util-4.1.jar to /var/lib/jenkins/jobs/JBake-Github/workspace/target/lib/asm-util-4.1.jar
+[INFO] Copying pegdown-1.4.2.jar to /var/lib/jenkins/jobs/JBake-Github/workspace/target/lib/pegdown-1.4.2.jar
+[INFO] Copying jetty-io-8.1.12.v20130726.jar to /var/lib/jenkins/jobs/JBake-Github/workspace/target/lib/jetty-io-8.1.12.v20130726.jar
+[INFO] Copying commons-configuration-1.9.jar to /var/lib/jenkins/jobs/JBake-Github/workspace/target/lib/commons-configuration-1.9.jar
+[INFO] Copying javax.servlet-3.0.0.v201112011016.jar to /var/lib/jenkins/jobs/JBake-Github/workspace/target/lib/javax.servlet-3.0.0.v201112011016.jar
+[INFO] 
+[INFO] --- maven-assembly-plugin:2.4:single (zip-example-project-freemarker) @ jbake-core ---
+[INFO] Reading assembly descriptor: src/main/assembly/assembly-example-project-freemarker.xml
+[INFO] Building zip: /var/lib/jenkins/jobs/JBake-Github/workspace/target/example_project_freemarker.zip
+[INFO] 
+[INFO] --- maven-assembly-plugin:2.4:single (zip-example-project-groovy) @ jbake-core ---
+[INFO] Reading assembly descriptor: src/main/assembly/assembly-example-project-groovy.xml
+[INFO] Building zip: /var/lib/jenkins/jobs/JBake-Github/workspace/target/example_project_groovy.zip
+[INFO] 
+[INFO] --- maven-assembly-plugin:2.4:single (zip-example-project-thymeleaf) @ jbake-core ---
+[INFO] Reading assembly descriptor: src/main/assembly/assembly-example-project-thymeleaf.xml
+[INFO] Building zip: /var/lib/jenkins/jobs/JBake-Github/workspace/target/example_project_thymeleaf.zip
+[INFO] 
+[INFO] --- maven-assembly-plugin:2.4:single (make-assembly) @ jbake-core ---
+[INFO] Reading assembly descriptor: src/main/assembly/assembly.xml
+[INFO] Building zip: /var/lib/jenkins/jobs/JBake-Github/workspace/dist/jbake-2.3.3-SNAPSHOT-bin.zip
+[INFO] 
+[INFO] --- maven-install-plugin:2.3.1:install (default-install) @ jbake-core ---
+[INFO] Installing /var/lib/jenkins/jobs/JBake-Github/workspace/target/jbake-core.jar to /var/lib/jenkins/.m2/repository/org/jbake/jbake-core/2.3.3-SNAPSHOT/jbake-core-2.3.3-SNAPSHOT.jar
+[INFO] Installing /var/lib/jenkins/jobs/JBake-Github/workspace/pom.xml to /var/lib/jenkins/.m2/repository/org/jbake/jbake-core/2.3.3-SNAPSHOT/jbake-core-2.3.3-SNAPSHOT.pom
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 14.975s
+[INFO] Finished at: Mon Feb 09 00:35:49 UTC 2015
+[INFO] Final Memory: 34M/82M
+[INFO] ------------------------------------------------------------------------
+Waiting for Jenkins to finish collecting data
+[JENKINS] Archiving /var/lib/jenkins/jobs/JBake-Github/workspace/pom.xml to org.jbake/jbake-core/2.3.3-SNAPSHOT/jbake-core-2.3.3-SNAPSHOT.pom
+[JENKINS] Archiving /var/lib/jenkins/jobs/JBake-Github/workspace/target/jbake-core.jar to org.jbake/jbake-core/2.3.3-SNAPSHOT/jbake-core-2.3.3-SNAPSHOT.jar
+channel stopped
+Archiving artifacts
+Setting commit status on GitHub for https://github.com/macluo/jbake/commit/4d40e82b5062d6c93b6672aa3598742b1ee1fe65
+Finished: SUCCESS

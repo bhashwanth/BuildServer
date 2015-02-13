@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<com.cloudbees.jenkins.GitHubPushTrigger_-DescriptorImpl plugin="github@1.10">
+  <manageHook>true</manageHook>
+  <hookUrl>http://52.0.209.194:8080/github-webhook/</hookUrl>
+  <credentials>
+    <com.cloudbees.jenkins.Credential>
+      <username>macluo</username>
+      <apiUrl>https://api.github.com/</apiUrl>
+      <oauthAccessToken>c44fug74jfy39fygj46gyh846gy4t6dkb944ea9c</oauthAccessToken>
+    </com.cloudbees.jenkins.Credential>
+    <com.cloudbees.jenkins.Credential>
+      <username></username>
+      <apiUrl></apiUrl>
+      <oauthAccessToken></oauthAccessToken>
+    </com.cloudbees.jenkins.Credential>
+  </credentials>
+</com.cloudbees.jenkins.GitHubPushTrigger_-DescriptorImpl>
